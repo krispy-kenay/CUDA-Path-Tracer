@@ -416,7 +416,7 @@ Starting RR at bounce 1 gives roughly a 23% speedup, starting at bounce 3 gives 
 The linear relationship makes sense—higher thresholds mean more rays survive longer, requiring more shader invocations and intersection tests.
 The diminishing returns past threshold 3 suggest that most of the performance benefit comes from killing rays early in their lifetime.
 
-![Frame times with RR enabled](img/rr_frame time.png)
+![Frame times with RR enabled](img/rr_frametime.png)
 
 In simple scenes, even aggressive Russian Roulette does not change rendering behavior by much, even for low sample counts.
 In more complex scenes, it does decrease convergence speed to a degree, but this was not evaluated numerically.
@@ -453,7 +453,7 @@ For moderate complexity meshes (a few thousand triangles), the difference is dra
 Without BVH, even the Utah teapot is closer to seconds per frame than frames per second.
 With BVH enabled, performance returns to near-baseline levels (38.189 ms/frame vs ~30 ms/frame).
 
-![Frame Times for BVH vs no BVH](img/bvh_frame time.png)
+![Frame Times for BVH vs no BVH](img/bvh_frametime.png)
 
 Building the BVH adds some overhead but its negligible compared to even the average frame time at around 9-10 ms.
 Despite the bunny having nearly 20x more triangles than the teapot, the build time only increases by 0.6 ms.
