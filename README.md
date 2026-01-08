@@ -1,6 +1,6 @@
 * Tested on: Windows 10, EPYC 9354 @ 3.25GHz, 16GB RAM, RTX 2000 Ada 23GB VRAM
 
-Project 3 CUDA Path Tracer
+CUDA Path Tracer
 ====================
 
 This project implements a CUDA-based path tracer with various features and optimizations.
