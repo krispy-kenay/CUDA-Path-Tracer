@@ -306,7 +306,7 @@ The cost grows roughly linearly with shadow ray count since each additional ray 
 For practical uses, 1-2 shadow rays provide a good balance between quality and speed, as the quality at 3000 samples matches what the naive path tracer would achieve at 5000 samples.
 Therefore, the per frame cost pays off when factoring in total convergence time.
 
-![Frame timing with and without NEE](img/nee_frame time.png)
+![Frame timing with and without NEE](img/nee_frametime.png)
 
 Breaking down where the time goes at different bounce depths with 1 shadow ray shows that the NEE overhead is substantial but not too bad.
 At shallow depths (1-2 bounces), the shadow ray processing takes 2.2 ms and 1.4 ms respectively while the main shading kernel roughly doubles from 0.6 ms to 1.5 ms due to the additional shadow ray logic.
